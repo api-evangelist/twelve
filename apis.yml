@@ -1,7 +1,25 @@
 aid: twelve
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/twelve.png
 name: Twelve
-description: Twelve is a company surfaced as a portfolio company of dcvc, techstars and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: Twelve is a carbon transformation company that converts CO2, water, and
+  renewable electricity into fuels and chemicals that serve as drop-in replacements
+  for petroleum-based products. Its proprietary eManufacturing technology powers AirPlant
+  One in Moses Lake, Washington, which produces E-Jet sustainable aviation fuel and
+  E-Naphtha, while its eMade program partners with consumer brands on CO2-made materials.
+  Investors include TPG, DCVC, Microsoft, Carbon Direct, Breakout Ventures, and the
+  Chan Zuckerberg Initiative. Twelve publishes no public developer API, but its Wix-hosted
+  site exposes an llms.txt and a live site MCP endpoint for agentic access.
 url: https://raw.githubusercontent.com/api-evangelist/twelve/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,9 +30,15 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
+- Carbon Transformation
+- Climate Tech
+- Sustainable Aviation Fuel
+- Chemicals
+- Clean Energy
+- Manufacturing
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,4 +47,23 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://twelve.co/
+  url: https://www.twelve.co/
+- type: Blog
+  url: https://www.twelve.co/catalyst
+- type: Support
+  url: https://www.twelve.co/contact
+- type: PrivacyPolicy
+  url: https://www.twelve.co/privacypolicy
+- type: TermsOfService
+  url: https://www.twelve.co/termsofservice
+- type: MCPServer
+  url: mcp/twelve-mcp.yml
+- type: LLMsTxt
+  url: llms/twelve-llms.txt
+- type: DomainSecurity
+  url: security/twelve-domain-security.yml
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 4
+  pass: local-v1

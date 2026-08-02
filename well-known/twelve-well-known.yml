@@ -1,0 +1,25 @@
+generated: '2026-07-21'
+method: searched
+source: live HTTP probes of https://www.twelve.co/
+host: https://www.twelve.co
+documents:
+- path: /.well-known/security.txt
+  status: 400
+- path: /.well-known/openid-configuration
+  status: 400
+- path: /.well-known/oauth-authorization-server
+  status: 400
+- path: /.well-known/api-catalog
+  status: 400
+- path: /.well-known/ai-plugin.json
+  status: 400
+- path: /llms.txt
+  status: 200
+  file: ../llms/twelve-llms.txt
+- path: /robots.txt
+  status: 200
+notes: >-
+  Wix-hosted site returns 400 for all /.well-known/ paths (probed 2026-07-21;
+  apex twelve.co 301s to www). No security.txt or OAuth/OIDC discovery surface.
+  The site does publish /llms.txt (saved verbatim in llms/) which advertises the
+  Wix Site MCP endpoint at https://www.twelve.co/_api/mcp.

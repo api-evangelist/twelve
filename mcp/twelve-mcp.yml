@@ -1,0 +1,38 @@
+generated: '2026-07-21'
+method: searched
+source: https://www.twelve.co/llms.txt
+status: published
+server:
+  name: Site Visitor Assistant for site "Twelve | A World Made from Air"
+  transport: http
+  url: https://www.twelve.co/_api/mcp
+  protocolVersion: '2025-03-26'
+  version: 1.0.0
+  authentication: none
+  provider_platform: Wix Site MCP
+  docs: https://dev.wix.com/docs/develop-websites/articles/get-started/about-the-wix-site-mcp
+notes: >-
+  Live, publicly reachable MCP server hosted on Twelve's own domain and
+  advertised in their /llms.txt. Verified 2026-07-21 via JSON-RPC initialize
+  (200, serverInfo returned) and tools/list. It is the platform-provided Wix
+  Site MCP (site content, business details, and Wix business-solution APIs on
+  the visitor's behalf), not a bespoke Twelve product API.
+tools:
+- name: GetBusinessDetails
+  description: Get business and site details (timezone, email, phone, address).
+- name: SearchInSite
+  description: Searches the site for information.
+- name: SearchSiteApiDocs
+  description: Retrieves API documentation for the Wix business solutions installed on this site.
+- name: GenerateVisitorToken
+  description: Creates a visitor session and access token; required before CallWixSiteAPI.
+- name: CallWixSiteAPI
+  description: Calls Wix site API methods on a visitor's behalf (query data, bookings, purchases).
+- name: ExecuteWixAPI
+  description: Run JavaScript against the Wix REST API on this site.
+- name: ReadFullDocsArticle
+  description: Fetches a complete article from the Wix developer documentation portal.
+- name: ReadFullDocsMethodSchema
+  description: Fetches the full request/response schema for a Wix API method.
+- name: BrowseWixRESTDocsMenu
+  description: Browse the Wix REST API documentation menu hierarchy.

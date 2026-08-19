@@ -11,12 +11,10 @@ server:
   authentication: none
   provider_platform: Wix Site MCP
   docs: https://dev.wix.com/docs/develop-websites/articles/get-started/about-the-wix-site-mcp
-notes: >-
-  Live, publicly reachable MCP server hosted on Twelve's own domain and
-  advertised in their /llms.txt. Verified 2026-07-21 via JSON-RPC initialize
-  (200, serverInfo returned) and tools/list. It is the platform-provided Wix
-  Site MCP (site content, business details, and Wix business-solution APIs on
-  the visitor's behalf), not a bespoke Twelve product API.
+notes: Live, publicly reachable MCP server hosted on Twelve's own domain and advertised in their /llms.txt.
+  Verified 2026-07-21 via JSON-RPC initialize (200, serverInfo returned) and tools/list. It is the platform-provided
+  Wix Site MCP (site content, business details, and Wix business-solution APIs on the visitor's behalf),
+  not a bespoke Twelve product API.
 tools:
 - name: GetBusinessDetails
   description: Get business and site details (timezone, email, phone, address).
@@ -36,3 +34,11 @@ tools:
   description: Fetches the full request/response schema for a Wix API method.
 - name: BrowseWixRESTDocsMenu
   description: Browse the Wix REST API documentation menu hierarchy.
+deployment:
+  mode: remote
+  endpoint: https://www.twelve.co/_api/mcp
+  verified: probed
+  probe: live
+  tools: 9
+  checked: '2026-08-12'
+  source: catalog MCP census
